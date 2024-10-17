@@ -1,5 +1,4 @@
-// dynamic routing
-
+import Countries from "@/app/components/Countries";
 import { Span } from "next/dist/trace";
 
 
@@ -61,14 +60,13 @@ export default function country_name({params}:{params:{country_name:string,popul
         params.population = "Sorry we do not have data of this country" ;
         params.capital_city = "Sorry we do not have data of this country" ;
        }
-    
-    
+   const name = params.country_name  ;
+    const population = params.population ;
+    const capital_city =params.capital_city;
+
     return(
         <div>
-        <h1>Country details :-</h1>
-        <p>Country name : {params.country_name}</p>
-        <p>Population : <span style={{color:"red"}}>{params.population} </span> </p>
-        <p>Capital city : <span style={{color:"red"}}>{params.capital_city}</span> </p>
+        <Countries name={name} population={population} capital_city={capital_city} />
         </div>
     )
 }
