@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { redirect } from "next/dist/server/api-utils";
-import localFont from "next/font/local";
 import Link from "next/link";
 // import "./globals.css";
 
